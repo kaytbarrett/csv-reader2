@@ -16,9 +16,7 @@ int main(){
     while(getline(inputFile, line)){
         size_t pos;
         while((pos = line.find(',')) != string::npos){
-            line.erase(pos, 1);
-            line.insert(pos, " ");
-            pos++; 
+            line.replace(pos, 1, " ");
         }
         outputFile << line << '\n' << endl;
     }
